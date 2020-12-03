@@ -48,6 +48,7 @@ namespace ReportTest1
             mainInfo.Columns.Add(new DataColumn("weigher", Type.GetType("System.String")));
             mainInfo.Columns.Add(new DataColumn("error", Type.GetType("System.String")));
             mainInfo.Columns.Add(new DataColumn("oper_name", Type.GetType("System.String")));
+            mainInfo.Columns.Add(new DataColumn("date", Type.GetType("System.String")));
 
             // Заполняем таблицу mainInfo
             DataRow row = mainInfo.NewRow();
@@ -60,6 +61,7 @@ namespace ReportTest1
             row["weigher"] = "Веста-СД 100 - 1/2 Ф №369";
             row["error"] = "+/- 2.0%";
             row["oper_name"] = "Тарасюк Т.И.";
+            row["date"] = (DateTime.Now).ToString();
             mainInfo.Rows.Add(row);
 
             // Добавляем таблицы в словарь
