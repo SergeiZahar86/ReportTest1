@@ -21,7 +21,7 @@ namespace ReportTest1
 
             // получаем сведения по партии вагонов
             string sqlExpressionPart = $"SELECT part_id, oper, num_izm, start_time," +
-                $" end_time, num_metering FROM tb_part WHERE part_id LIKE '{numGuid}%'";
+                $" end_time FROM tb_part WHERE part_id LIKE '{numGuid}%'";
 
             // получаем 25 вагонов
             string sqlExpressionCar = $"SELECT car.part_id, car.car_id, num, car.tara, car.tara_e," +
@@ -48,6 +48,9 @@ namespace ReportTest1
             mainInfo.Columns.Add(new DataColumn("weigher", Type.GetType("System.String")));
             mainInfo.Columns.Add(new DataColumn("error", Type.GetType("System.String")));
             mainInfo.Columns.Add(new DataColumn("oper_name", Type.GetType("System.String")));
+
+            DataRow row = mainInfo.NewRow();
+            row[""]
 
             // Создаем таблицу cars_list
             DataTable carsList = new DataTable("cars_list");
@@ -78,8 +81,11 @@ namespace ReportTest1
                 Console.WriteLine("\tWorkstationld: {0}", connection.WorkstationId);
                 Console.WriteLine("***********************************************************************");
                 Console.WriteLine();
-                //Console.Read();
 
+
+
+                //Console.Read();
+                /*
                 SqlCommand command1 = new SqlCommand(sqlExpressionPart, connection); // делаем команду
                 using (SqlDataReader reader = command1.ExecuteReader()) // класс для чтения строк из патока 
                 {
@@ -92,7 +98,7 @@ namespace ReportTest1
                             //row["num_metering"] = reader.GetGuid(0).ToString();
                             Guid gdd = reader.GetGuid(0);
                             object part_id = reader.GetValue(0);
-                            /*object oper = reader.GetValue(1);
+                            object oper = reader.GetValue(1);
                             object num_izm = reader.GetValue(2);
                             object start_time = reader.GetValue(3);
                             object end_time = reader.GetValue(4);
@@ -111,10 +117,10 @@ namespace ReportTest1
                                                         Console.WriteLine();
                                                         Console.WriteLine("************** сведения о партии ***************************************************");
                                                         Console.WriteLine($"{part.Part_id}, {part.Oper}, {part.Num_izm.ToString()}," +
-                                                            $" {part.Start_time.ToString()}, {part.End_time.ToString()}, {part.Num_izm.ToString()} ");*/
+                                                            $" {part.Start_time.ToString()}, {part.End_time.ToString()}, {part.Num_izm.ToString()} ");
                         }
                     }
-                }
+                }*/
             }
         }
     }
