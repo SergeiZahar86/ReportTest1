@@ -11,11 +11,38 @@ using System.IO;
 
 namespace ReportTest1
 {
+    static class ToDebug
+    {
+        public static string ToDebugString<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
+        {
+            return "{" + string.Join(",", dictionary.Select(kv => kv.Key + "=" + kv.Value).ToArray()) + "}";
+        }
+    }
     class Program
     {
         public static string numGuid = "A78A";                         // первые четыре знака номера партии
+
+
+        
         static void Main(string[] args)
         {
+            
+            if (args.Length == 0) return;
+            String tid = "hello world";
+            string aa ="";
+            foreach(string s in args)
+            {
+                aa += ","+s;
+            }
+            //String tid = args[0];String tid = "Exel";
+
+            ///// кирилу для проверки
+            byte[] ddd = Encoding.UTF8.GetBytes(tid + aa);
+            FileStream fsfg = new FileStream("outputTid.txt", FileMode.Create);  // .pdf, .xls, .doc
+            fsfg.Write(ddd, 0, ddd.Length);
+
+
+
             Dictionary<string, string> config = DFReport.getConfig();                    // Получение конфигурации
             string server = config["Server"];
             string ConnectionString = config["ConnectionString"];
@@ -33,8 +60,21 @@ namespace ReportTest1
                 $" on car.consigner = cons.contractor_id left join sp_mat as mat " +
                 $" on car.mat = mat.mat_id where car.part_id LIKE '{numGuid}%' and car.att_code in (1, 2)";
 
-            Dictionary<string, string> param = DFReport.getParam(server, "test"); // Получение параметров документа
+            Dictionary<string, string> param = DFReport.getParam(server, tid); // Получение параметров документа
 
+            ///// кирилу для проверки
+            string ss = ToDebug.ToDebugString<string, string>(param);
+            byte[] btt = Encoding.UTF8.GetBytes(ss);
+            FileStream fs = new FileStream("output.pdf", FileMode.Create);  // .pdf, .xls, .doc
+            fs.Write(btt, 0, btt.Length);
+
+
+            /*if (param["type"] == "html")
+            {
+                string error;
+                bool ret = DFReport.putData(server, tid, Encoding.UTF8.GetBytes("Hello, world!"), out error);
+                System.Environment.Exit(0);
+            }*/
             Dictionary<string, DataTable> DataSets = new Dictionary<string, DataTable>();
 
             // Создаем таблицу main_info
@@ -104,12 +144,13 @@ namespace ReportTest1
             try // Формируем документ
             {
                 string rdl = File.ReadAllText("PlumbLineProtocol.rdl", Encoding.GetEncoding(866));
-                byte[] buf = DFReport.build_doc(DataSets, rdl, "Excel");
-                FileStream fs = new FileStream("output.xls", FileMode.Create);  // .pdf, .xls, .doc
-                fs.Write(buf, 0, buf.Length);
+                byte[] buf = DFReport.build_doc(DataSets, rdl, param["type"]);
+
+                //FileStream fs = new FileStream("output.xls", FileMode.Create);  // .pdf, .xls, .doc
+                //fs.Write(buf, 0, buf.Length);
 
                 string error;
-                bool ret = DFReport.putData(server, "test", buf, out error);
+                bool ret = DFReport.putData(server, tid, buf, out error);
                 if (ret == false)
                 {
                     Console.WriteLine(error);

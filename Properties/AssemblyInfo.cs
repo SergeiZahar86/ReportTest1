@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("ReportTest1")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Протокол отвеса")]
+[assembly: AssemblyDescription("Протокол отвеса")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ReportTest1")]
