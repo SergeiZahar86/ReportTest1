@@ -1,0 +1,2170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>ENTERDATA</DataProvider>
+        <ConnectString />
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>e7eccba1-d3cf-4ac1-b88d-76896003ab72</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="cars_list">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>&lt;Query&gt;
+  &lt;XmlData&gt;
+    &lt;Data&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;1&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;2&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;3&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;4&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;5&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;6&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;7&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;8&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;9&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;10&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;11&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;12&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;13&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;14&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;15&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;16&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;17&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;18&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;19&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;20&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;21&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;22&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;23&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;24&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+        &lt;car_id&gt;25&lt;/car_id&gt;
+        &lt;weighing_time&gt;10:02:55&lt;/weighing_time&gt;
+        &lt;num&gt;45692365&lt;/num&gt;
+        &lt;tara&gt;23.4&lt;/tara&gt;
+        &lt;brutto&gt;92.25&lt;/brutto&gt;
+        &lt;netto&gt;68.85&lt;/netto&gt;
+        &lt;carrying&gt;70.5&lt;/carrying&gt;
+        &lt;left_truck&gt;46.45&lt;/left_truck&gt;
+        &lt;right_truck&gt;45.8&lt;/right_truck&gt;
+        &lt;error_k&gt;-1.45&lt;/error_k&gt;
+        &lt;error_truck&gt;0.65&lt;/error_truck&gt;
+      &lt;/Row&gt;
+    &lt;/Data&gt;
+  &lt;/XmlData&gt;
+  &lt;ElementPath&gt;Data{}/Row{car_id(Integer),weighing_time(String),num(String),tara(Float),brutto(Float),netto(Float),carrying(Float),left_truck(Float),right_truck(Float),error_k(Float),error_truck(Float)}&lt;/ElementPath&gt;
+&lt;/Query&gt;</CommandText>
+        <rd:DesignerState>
+          <DataGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+            <RowNumber>25</RowNumber>
+            <ColumnNumber>11</ColumnNumber>
+            <ColumnName ColumnIndex="0" ColumnWidth="100" DataType="Integer">car_id</ColumnName>
+            <ColumnName ColumnIndex="1" ColumnWidth="100" DataType="String">weighing_time</ColumnName>
+            <ColumnName ColumnIndex="2" ColumnWidth="100" DataType="String">num</ColumnName>
+            <ColumnName ColumnIndex="3" ColumnWidth="100" DataType="Float">tara</ColumnName>
+            <ColumnName ColumnIndex="4" ColumnWidth="100" DataType="Float">brutto</ColumnName>
+            <ColumnName ColumnIndex="5" ColumnWidth="100" DataType="Float">netto</ColumnName>
+            <ColumnName ColumnIndex="6" ColumnWidth="100" DataType="Float">carrying</ColumnName>
+            <ColumnName ColumnIndex="7" ColumnWidth="100" DataType="Float">left_truck</ColumnName>
+            <ColumnName ColumnIndex="8" ColumnWidth="100" DataType="Float">right_truck</ColumnName>
+            <ColumnName ColumnIndex="9" ColumnWidth="100" DataType="Float">error_k</ColumnName>
+            <ColumnName ColumnIndex="10" ColumnWidth="100" DataType="Float">error_truck</ColumnName>
+            <Data ColumnIndex="0" RowIndex="0">1</Data>
+            <Data ColumnIndex="1" RowIndex="0">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="0">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="0">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="0">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="0">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="0">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="0">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="0">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="0">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="0">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="1">2</Data>
+            <Data ColumnIndex="1" RowIndex="1">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="1">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="1">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="1">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="1">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="1">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="1">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="1">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="1">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="1">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="2">3</Data>
+            <Data ColumnIndex="1" RowIndex="2">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="2">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="2">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="2">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="2">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="2">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="2">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="2">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="2">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="2">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="3">4</Data>
+            <Data ColumnIndex="1" RowIndex="3">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="3">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="3">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="3">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="3">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="3">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="3">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="3">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="3">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="3">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="4">5</Data>
+            <Data ColumnIndex="1" RowIndex="4">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="4">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="4">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="4">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="4">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="4">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="4">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="4">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="4">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="4">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="5">6</Data>
+            <Data ColumnIndex="1" RowIndex="5">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="5">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="5">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="5">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="5">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="5">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="5">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="5">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="5">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="5">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="6">7</Data>
+            <Data ColumnIndex="1" RowIndex="6">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="6">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="6">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="6">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="6">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="6">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="6">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="6">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="6">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="6">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="7">8</Data>
+            <Data ColumnIndex="1" RowIndex="7">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="7">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="7">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="7">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="7">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="7">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="7">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="7">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="7">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="7">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="8">9</Data>
+            <Data ColumnIndex="1" RowIndex="8">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="8">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="8">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="8">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="8">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="8">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="8">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="8">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="8">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="8">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="9">10</Data>
+            <Data ColumnIndex="1" RowIndex="9">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="9">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="9">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="9">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="9">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="9">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="9">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="9">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="9">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="9">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="10">11</Data>
+            <Data ColumnIndex="1" RowIndex="10">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="10">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="10">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="10">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="10">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="10">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="10">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="10">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="10">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="10">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="11">12</Data>
+            <Data ColumnIndex="1" RowIndex="11">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="11">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="11">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="11">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="11">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="11">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="11">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="11">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="11">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="11">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="12">13</Data>
+            <Data ColumnIndex="1" RowIndex="12">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="12">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="12">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="12">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="12">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="12">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="12">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="12">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="12">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="12">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="13">14</Data>
+            <Data ColumnIndex="1" RowIndex="13">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="13">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="13">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="13">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="13">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="13">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="13">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="13">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="13">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="13">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="14">15</Data>
+            <Data ColumnIndex="1" RowIndex="14">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="14">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="14">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="14">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="14">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="14">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="14">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="14">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="14">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="14">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="15">16</Data>
+            <Data ColumnIndex="1" RowIndex="15">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="15">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="15">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="15">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="15">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="15">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="15">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="15">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="15">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="15">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="16">17</Data>
+            <Data ColumnIndex="1" RowIndex="16">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="16">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="16">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="16">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="16">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="16">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="16">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="16">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="16">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="16">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="17">18</Data>
+            <Data ColumnIndex="1" RowIndex="17">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="17">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="17">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="17">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="17">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="17">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="17">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="17">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="17">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="17">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="18">19</Data>
+            <Data ColumnIndex="1" RowIndex="18">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="18">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="18">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="18">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="18">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="18">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="18">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="18">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="18">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="18">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="19">20</Data>
+            <Data ColumnIndex="1" RowIndex="19">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="19">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="19">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="19">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="19">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="19">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="19">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="19">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="19">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="19">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="20">21</Data>
+            <Data ColumnIndex="1" RowIndex="20">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="20">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="20">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="20">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="20">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="20">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="20">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="20">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="20">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="20">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="21">22</Data>
+            <Data ColumnIndex="1" RowIndex="21">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="21">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="21">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="21">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="21">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="21">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="21">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="21">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="21">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="21">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="22">23</Data>
+            <Data ColumnIndex="1" RowIndex="22">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="22">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="22">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="22">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="22">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="22">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="22">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="22">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="22">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="22">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="23">24</Data>
+            <Data ColumnIndex="1" RowIndex="23">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="23">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="23">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="23">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="23">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="23">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="23">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="23">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="23">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="23">0.65</Data>
+            <Data ColumnIndex="0" RowIndex="24">25</Data>
+            <Data ColumnIndex="1" RowIndex="24">10:02:55</Data>
+            <Data ColumnIndex="2" RowIndex="24">45692365</Data>
+            <Data ColumnIndex="3" RowIndex="24">23.4</Data>
+            <Data ColumnIndex="4" RowIndex="24">92.25</Data>
+            <Data ColumnIndex="5" RowIndex="24">68.85</Data>
+            <Data ColumnIndex="6" RowIndex="24">70.5</Data>
+            <Data ColumnIndex="7" RowIndex="24">46.45</Data>
+            <Data ColumnIndex="8" RowIndex="24">45.8</Data>
+            <Data ColumnIndex="9" RowIndex="24">-1.45</Data>
+            <Data ColumnIndex="10" RowIndex="24">0.65</Data>
+          </DataGrid>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="car_id">
+          <DataField>car_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="weighing_time">
+          <DataField>weighing_time</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="num">
+          <DataField>num</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tara">
+          <DataField>tara</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="brutto">
+          <DataField>brutto</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="netto">
+          <DataField>netto</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="carrying">
+          <DataField>carrying</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="left_truck">
+          <DataField>left_truck</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="right_truck">
+          <DataField>right_truck</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="error_k">
+          <DataField>error_k</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="error_truck">
+          <DataField>error_truck</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="main_info">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>&lt;Query&gt;
+  &lt;XmlData&gt;
+    &lt;Data&gt;
+      &lt;Row&gt;
+        &lt;num_izm&gt;8397&lt;/num_izm&gt;
+        &lt;start_date&gt;03.06.2020&lt;/start_date&gt;
+        &lt;start_time&gt;08:10:02&lt;/start_time&gt;
+        &lt;fraction&gt;Орех&lt;/fraction&gt;
+        &lt;shipper&gt;Запсиб-Руда&lt;/shipper&gt;
+        &lt;consignee&gt;Северные линии&lt;/consignee&gt;
+        &lt;weigher&gt;Веста-СД 100 - 1/2 Ф №369&lt;/weigher&gt;
+        &lt;error&gt;2.2&lt;/error&gt;
+        &lt;oper_name&gt;Владимир Ильич Ленин&lt;/oper_name&gt;
+        &lt;date&gt;28.02.2020  12:25:47&lt;/date&gt;
+      &lt;/Row&gt;
+    &lt;/Data&gt;
+  &lt;/XmlData&gt;
+  &lt;ElementPath&gt;Data{}/Row{num_izm(Integer),start_date(String),start_time(String),fraction(String),shipper(String),consignee(String),weigher(String),error(Float),oper_name(String),date(String)}&lt;/ElementPath&gt;
+&lt;/Query&gt;</CommandText>
+        <rd:DesignerState>
+          <DataGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+            <RowNumber>1</RowNumber>
+            <ColumnNumber>10</ColumnNumber>
+            <ColumnName ColumnIndex="0" ColumnWidth="100" DataType="Integer">num_izm</ColumnName>
+            <ColumnName ColumnIndex="1" ColumnWidth="100" DataType="String">start_date</ColumnName>
+            <ColumnName ColumnIndex="2" ColumnWidth="100" DataType="String">start_time</ColumnName>
+            <ColumnName ColumnIndex="3" ColumnWidth="100" DataType="String">fraction</ColumnName>
+            <ColumnName ColumnIndex="4" ColumnWidth="100" DataType="String">shipper</ColumnName>
+            <ColumnName ColumnIndex="5" ColumnWidth="100" DataType="String">consignee</ColumnName>
+            <ColumnName ColumnIndex="6" ColumnWidth="202" DataType="String">weigher</ColumnName>
+            <ColumnName ColumnIndex="7" ColumnWidth="100" DataType="Float">error</ColumnName>
+            <ColumnName ColumnIndex="8" ColumnWidth="189" DataType="String">oper_name</ColumnName>
+            <ColumnName ColumnIndex="9" ColumnWidth="100" DataType="String">date</ColumnName>
+            <Data ColumnIndex="0" RowIndex="0">8397</Data>
+            <Data ColumnIndex="1" RowIndex="0">03.06.2020</Data>
+            <Data ColumnIndex="2" RowIndex="0">08:10:02</Data>
+            <Data ColumnIndex="3" RowIndex="0">Орех</Data>
+            <Data ColumnIndex="4" RowIndex="0">Запсиб-Руда</Data>
+            <Data ColumnIndex="5" RowIndex="0">Северные линии</Data>
+            <Data ColumnIndex="6" RowIndex="0">Веста-СД 100 - 1/2 Ф №369</Data>
+            <Data ColumnIndex="7" RowIndex="0">2.2</Data>
+            <Data ColumnIndex="8" RowIndex="0">Владимир Ильич Ленин</Data>
+            <Data ColumnIndex="9" RowIndex="0">28.02.2020  12:25:47</Data>
+          </DataGrid>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="num_izm">
+          <DataField>num_izm</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="start_date">
+          <DataField>start_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="start_time">
+          <DataField>start_time</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="fraction">
+          <DataField>fraction</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="shipper">
+          <DataField>shipper</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="consignee">
+          <DataField>consignee</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="weigher">
+          <DataField>weigher</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="error">
+          <DataField>error</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="oper_name">
+          <DataField>oper_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="ReportTitle">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Результаты измерения веса состава в статике от </Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Label>Дата измерения</Label>
+                    <Value>=First(Fields!start_date.Value, "main_info")</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> с информацией о весе тележек</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:WatermarkTextbox>Title</rd:WatermarkTextbox>
+            <rd:DefaultName>ReportTitle</rd:DefaultName>
+            <Top>0mm</Top>
+            <Left>3.4925cm</Left>
+            <Height>10.58333mm</Height>
+            <Width>109.80208mm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>12.56458mm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>6mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox58">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox58</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>None</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>8.24896mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox33">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>тел.1 - тел.2</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox33</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Style>None</Style>
+                            </TopBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>6mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="error_truck">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!error_truck.Value</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>error_truck</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>9.38958mm</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox113">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>№ П/П</Value>
+                                <Style>
+                                  <FontFamily>Arial</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox113</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>22.88333mm</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox110">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Время взвешивания</Value>
+                                    <Style>
+                                      <FontFamily>Arial</FontFamily>
+                                      <FontSize>8pt</FontSize>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox110</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>16.53333mm</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox107">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Номер вагона</Value>
+                                        <Style>
+                                          <FontFamily>Arial</FontFamily>
+                                          <FontSize>8pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox107</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>9.24117mm</Size>
+                                <CellContents>
+                                  <Textbox Name="Textbox101">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>Тара, т</Value>
+                                            <Style>
+                                              <FontFamily>Arial</FontFamily>
+                                              <FontSize>8pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox101</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <VerticalAlign>Middle</VerticalAlign>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>12.56458mm</Size>
+                                    <CellContents>
+                                      <Textbox Name="Textbox104">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Брутто, т</Value>
+                                                <Style>
+                                                  <FontFamily>Arial</FontFamily>
+                                                  <FontSize>8pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox104</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember>
+                                      <TablixHeader>
+                                        <Size>12.43542mm</Size>
+                                        <CellContents>
+                                          <Textbox Name="Textbox98">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Нетто, т</Value>
+                                                    <Style>
+                                                      <FontFamily>Arial</FontFamily>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox98</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <VerticalAlign>Middle</VerticalAlign>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixHeader>
+                                      <TablixMembers>
+                                        <TablixMember>
+                                          <TablixHeader>
+                                            <Size>11.24167mm</Size>
+                                            <CellContents>
+                                              <Textbox Name="Textbox94">
+                                                <CanGrow>true</CanGrow>
+                                                <KeepTogether>true</KeepTogether>
+                                                <Paragraphs>
+                                                  <Paragraph>
+                                                    <TextRuns>
+                                                      <TextRun>
+                                                        <Value>Грузоподъемность, т</Value>
+                                                        <Style>
+                                                          <FontFamily>Arial</FontFamily>
+                                                          <FontSize>8pt</FontSize>
+                                                        </Style>
+                                                      </TextRun>
+                                                    </TextRuns>
+                                                    <Style>
+                                                      <TextAlign>Center</TextAlign>
+                                                    </Style>
+                                                  </Paragraph>
+                                                </Paragraphs>
+                                                <rd:DefaultName>Textbox94</rd:DefaultName>
+                                                <Style>
+                                                  <Border>
+                                                    <Color>LightGrey</Color>
+                                                    <Style>Solid</Style>
+                                                  </Border>
+                                                  <VerticalAlign>Middle</VerticalAlign>
+                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                  <PaddingRight>2pt</PaddingRight>
+                                                  <PaddingTop>2pt</PaddingTop>
+                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                </Style>
+                                              </Textbox>
+                                            </CellContents>
+                                          </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember>
+                                              <TablixHeader>
+                                                <Size>29.23959mm</Size>
+                                                <CellContents>
+                                                  <Textbox Name="Textbox90">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                      <Paragraph>
+                                                        <TextRuns>
+                                                          <TextRun>
+                                                            <Value>Тележки, т</Value>
+                                                            <Style>
+                                                              <FontFamily>Arial</FontFamily>
+                                                              <FontSize>8pt</FontSize>
+                                                            </Style>
+                                                          </TextRun>
+                                                        </TextRuns>
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
+                                                      </Paragraph>
+                                                    </Paragraphs>
+                                                    <rd:DefaultName>Textbox90</rd:DefaultName>
+                                                    <Style>
+                                                      <Border>
+                                                        <Color>LightGrey</Color>
+                                                        <Style>Solid</Style>
+                                                      </Border>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                  </Textbox>
+                                                </CellContents>
+                                              </TablixHeader>
+                                              <TablixMembers>
+                                                <TablixMember>
+                                                  <TablixHeader>
+                                                    <Size>11.50625mm</Size>
+                                                    <CellContents>
+                                                      <Textbox Name="Textbox122">
+                                                        <CanGrow>true</CanGrow>
+                                                        <KeepTogether>true</KeepTogether>
+                                                        <Paragraphs>
+                                                          <Paragraph>
+                                                            <TextRuns>
+                                                              <TextRun>
+                                                                <Value />
+                                                                <Style>
+                                                                  <FontSize>8pt</FontSize>
+                                                                </Style>
+                                                              </TextRun>
+                                                            </TextRuns>
+                                                            <Style>
+                                                              <TextAlign>Center</TextAlign>
+                                                            </Style>
+                                                          </Paragraph>
+                                                        </Paragraphs>
+                                                        <rd:DefaultName>Textbox122</rd:DefaultName>
+                                                        <Style>
+                                                          <Border>
+                                                            <Style>None</Style>
+                                                          </Border>
+                                                          <TopBorder>
+                                                            <Color>LightGrey</Color>
+                                                            <Style>Solid</Style>
+                                                          </TopBorder>
+                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                          <PaddingRight>2pt</PaddingRight>
+                                                          <PaddingTop>2pt</PaddingTop>
+                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                        </Style>
+                                                      </Textbox>
+                                                    </CellContents>
+                                                  </TablixHeader>
+                                                  <TablixMembers>
+                                                    <TablixMember />
+                                                  </TablixMembers>
+                                                </TablixMember>
+                                              </TablixMembers>
+                                            </TablixMember>
+                                            <TablixMember>
+                                              <TablixHeader>
+                                                <Size>13.75833mm</Size>
+                                                <CellContents>
+                                                  <Textbox Name="Textbox91">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                      <Paragraph>
+                                                        <TextRuns>
+                                                          <TextRun>
+                                                            <Value>Левая</Value>
+                                                            <Style>
+                                                              <FontFamily>Arial</FontFamily>
+                                                              <FontSize>8pt</FontSize>
+                                                            </Style>
+                                                          </TextRun>
+                                                        </TextRuns>
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
+                                                      </Paragraph>
+                                                    </Paragraphs>
+                                                    <rd:DefaultName>Textbox91</rd:DefaultName>
+                                                    <Style>
+                                                      <Border>
+                                                        <Color>LightGrey</Color>
+                                                        <Style>Solid</Style>
+                                                      </Border>
+                                                      <VerticalAlign>Middle</VerticalAlign>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                  </Textbox>
+                                                </CellContents>
+                                              </TablixHeader>
+                                              <TablixMembers>
+                                                <TablixMember>
+                                                  <TablixHeader>
+                                                    <Size>15.48126mm</Size>
+                                                    <CellContents>
+                                                      <Textbox Name="Textbox75">
+                                                        <CanGrow>true</CanGrow>
+                                                        <KeepTogether>true</KeepTogether>
+                                                        <Paragraphs>
+                                                          <Paragraph>
+                                                            <TextRuns>
+                                                              <TextRun>
+                                                                <Value>Правая</Value>
+                                                                <Style>
+                                                                  <FontFamily>Arial</FontFamily>
+                                                                  <FontSize>8pt</FontSize>
+                                                                </Style>
+                                                              </TextRun>
+                                                            </TextRuns>
+                                                            <Style>
+                                                              <TextAlign>Center</TextAlign>
+                                                            </Style>
+                                                          </Paragraph>
+                                                        </Paragraphs>
+                                                        <rd:DefaultName>Textbox75</rd:DefaultName>
+                                                        <Style>
+                                                          <Border>
+                                                            <Color>LightGrey</Color>
+                                                            <Style>Solid</Style>
+                                                          </Border>
+                                                          <VerticalAlign>Middle</VerticalAlign>
+                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                          <PaddingRight>2pt</PaddingRight>
+                                                          <PaddingTop>2pt</PaddingTop>
+                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                        </Style>
+                                                      </Textbox>
+                                                    </CellContents>
+                                                  </TablixHeader>
+                                                  <TablixMembers>
+                                                    <TablixMember>
+                                                      <TablixHeader>
+                                                        <Size>11.50625mm</Size>
+                                                        <CellContents>
+                                                          <Textbox Name="Textbox87">
+                                                            <CanGrow>true</CanGrow>
+                                                            <KeepTogether>true</KeepTogether>
+                                                            <Paragraphs>
+                                                              <Paragraph>
+                                                                <TextRuns>
+                                                                  <TextRun>
+                                                                    <Value>+/- к гр/под</Value>
+                                                                    <Style>
+                                                                      <FontFamily>Arial</FontFamily>
+                                                                      <FontSize>8pt</FontSize>
+                                                                    </Style>
+                                                                  </TextRun>
+                                                                </TextRuns>
+                                                                <Style>
+                                                                  <TextAlign>Center</TextAlign>
+                                                                </Style>
+                                                              </Paragraph>
+                                                            </Paragraphs>
+                                                            <rd:DefaultName>Textbox87</rd:DefaultName>
+                                                            <Style>
+                                                              <Border>
+                                                                <Color>LightGrey</Color>
+                                                                <Style>Solid</Style>
+                                                              </Border>
+                                                              <TopBorder>
+                                                                <Style>None</Style>
+                                                              </TopBorder>
+                                                              <VerticalAlign>Top</VerticalAlign>
+                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                              <PaddingRight>2pt</PaddingRight>
+                                                              <PaddingTop>2pt</PaddingTop>
+                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                            </Style>
+                                                          </Textbox>
+                                                        </CellContents>
+                                                      </TablixHeader>
+                                                      <TablixMembers>
+                                                        <TablixMember />
+                                                      </TablixMembers>
+                                                    </TablixMember>
+                                                  </TablixMembers>
+                                                </TablixMember>
+                                              </TablixMembers>
+                                            </TablixMember>
+                                          </TablixMembers>
+                                        </TablixMember>
+                                      </TablixMembers>
+                                    </TablixMember>
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="car_id">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!car_id.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!car_id.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>9.38958mm</Size>
+                        <CellContents>
+                          <Textbox Name="car_id">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!car_id.Value</Value>
+                                    <Style>
+                                      <FontFamily>Arial</FontFamily>
+                                      <FontSize>8pt</FontSize>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>car_id</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>22.88333mm</Size>
+                            <CellContents>
+                              <Textbox Name="weighing_time">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>=Fields!weighing_time.Value</Value>
+                                        <Style>
+                                          <FontFamily>Arial</FontFamily>
+                                          <FontSize>8pt</FontSize>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>weighing_time</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>16.53333mm</Size>
+                                <CellContents>
+                                  <Textbox Name="num">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!num.Value</Value>
+                                            <Style>
+                                              <FontFamily>Arial</FontFamily>
+                                              <FontSize>8pt</FontSize>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>num</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>9.24117mm</Size>
+                                    <CellContents>
+                                      <Textbox Name="tara">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!tara.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Arial</FontFamily>
+                                                  <FontSize>8pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>tara</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember>
+                                      <TablixHeader>
+                                        <Size>12.56458mm</Size>
+                                        <CellContents>
+                                          <Textbox Name="brutto">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!brutto.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Arial</FontFamily>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>brutto</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixHeader>
+                                      <TablixMembers>
+                                        <TablixMember>
+                                          <TablixHeader>
+                                            <Size>12.43542mm</Size>
+                                            <CellContents>
+                                              <Textbox Name="netto">
+                                                <CanGrow>true</CanGrow>
+                                                <KeepTogether>true</KeepTogether>
+                                                <Paragraphs>
+                                                  <Paragraph>
+                                                    <TextRuns>
+                                                      <TextRun>
+                                                        <Value>=Fields!netto.Value</Value>
+                                                        <Style>
+                                                          <FontFamily>Arial</FontFamily>
+                                                          <FontSize>8pt</FontSize>
+                                                        </Style>
+                                                      </TextRun>
+                                                    </TextRuns>
+                                                    <Style>
+                                                      <TextAlign>Center</TextAlign>
+                                                    </Style>
+                                                  </Paragraph>
+                                                </Paragraphs>
+                                                <rd:DefaultName>netto</rd:DefaultName>
+                                                <Style>
+                                                  <Border>
+                                                    <Color>LightGrey</Color>
+                                                    <Style>Solid</Style>
+                                                  </Border>
+                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                  <PaddingRight>2pt</PaddingRight>
+                                                  <PaddingTop>2pt</PaddingTop>
+                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                </Style>
+                                              </Textbox>
+                                            </CellContents>
+                                          </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember>
+                                              <TablixHeader>
+                                                <Size>11.24167mm</Size>
+                                                <CellContents>
+                                                  <Textbox Name="carrying">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                      <Paragraph>
+                                                        <TextRuns>
+                                                          <TextRun>
+                                                            <Value>=Fields!carrying.Value</Value>
+                                                            <Style>
+                                                              <FontFamily>Arial</FontFamily>
+                                                              <FontSize>8pt</FontSize>
+                                                            </Style>
+                                                          </TextRun>
+                                                        </TextRuns>
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
+                                                      </Paragraph>
+                                                    </Paragraphs>
+                                                    <rd:DefaultName>carrying</rd:DefaultName>
+                                                    <Style>
+                                                      <Border>
+                                                        <Color>LightGrey</Color>
+                                                        <Style>Solid</Style>
+                                                      </Border>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                  </Textbox>
+                                                </CellContents>
+                                              </TablixHeader>
+                                              <TablixMembers>
+                                                <TablixMember>
+                                                  <TablixHeader>
+                                                    <Size>13.75833mm</Size>
+                                                    <CellContents>
+                                                      <Textbox Name="left_truck">
+                                                        <CanGrow>true</CanGrow>
+                                                        <KeepTogether>true</KeepTogether>
+                                                        <Paragraphs>
+                                                          <Paragraph>
+                                                            <TextRuns>
+                                                              <TextRun>
+                                                                <Value>=Fields!left_truck.Value</Value>
+                                                                <Style>
+                                                                  <FontFamily>Arial</FontFamily>
+                                                                  <FontSize>8pt</FontSize>
+                                                                </Style>
+                                                              </TextRun>
+                                                            </TextRuns>
+                                                            <Style>
+                                                              <TextAlign>Center</TextAlign>
+                                                            </Style>
+                                                          </Paragraph>
+                                                        </Paragraphs>
+                                                        <rd:DefaultName>left_truck</rd:DefaultName>
+                                                        <Style>
+                                                          <Border>
+                                                            <Color>LightGrey</Color>
+                                                            <Style>Solid</Style>
+                                                          </Border>
+                                                          <PaddingLeft>2pt</PaddingLeft>
+                                                          <PaddingRight>2pt</PaddingRight>
+                                                          <PaddingTop>2pt</PaddingTop>
+                                                          <PaddingBottom>2pt</PaddingBottom>
+                                                        </Style>
+                                                      </Textbox>
+                                                    </CellContents>
+                                                  </TablixHeader>
+                                                  <TablixMembers>
+                                                    <TablixMember>
+                                                      <TablixHeader>
+                                                        <Size>15.48126mm</Size>
+                                                        <CellContents>
+                                                          <Textbox Name="right_truck">
+                                                            <CanGrow>true</CanGrow>
+                                                            <KeepTogether>true</KeepTogether>
+                                                            <Paragraphs>
+                                                              <Paragraph>
+                                                                <TextRuns>
+                                                                  <TextRun>
+                                                                    <Value>=Fields!right_truck.Value</Value>
+                                                                    <Style>
+                                                                      <FontFamily>Arial</FontFamily>
+                                                                      <FontSize>8pt</FontSize>
+                                                                    </Style>
+                                                                  </TextRun>
+                                                                </TextRuns>
+                                                                <Style>
+                                                                  <TextAlign>Center</TextAlign>
+                                                                </Style>
+                                                              </Paragraph>
+                                                            </Paragraphs>
+                                                            <rd:DefaultName>right_truck</rd:DefaultName>
+                                                            <Style>
+                                                              <Border>
+                                                                <Color>LightGrey</Color>
+                                                                <Style>Solid</Style>
+                                                              </Border>
+                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                              <PaddingRight>2pt</PaddingRight>
+                                                              <PaddingTop>2pt</PaddingTop>
+                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                            </Style>
+                                                          </Textbox>
+                                                        </CellContents>
+                                                      </TablixHeader>
+                                                      <TablixMembers>
+                                                        <TablixMember>
+                                                          <TablixHeader>
+                                                            <Size>11.50625mm</Size>
+                                                            <CellContents>
+                                                              <Textbox Name="error_k">
+                                                                <CanGrow>true</CanGrow>
+                                                                <KeepTogether>true</KeepTogether>
+                                                                <Paragraphs>
+                                                                  <Paragraph>
+                                                                    <TextRuns>
+                                                                      <TextRun>
+                                                                        <Value>=Fields!error_k.Value</Value>
+                                                                        <Style>
+                                                                          <FontFamily>Arial</FontFamily>
+                                                                          <FontSize>8pt</FontSize>
+                                                                        </Style>
+                                                                      </TextRun>
+                                                                    </TextRuns>
+                                                                    <Style>
+                                                                      <TextAlign>Center</TextAlign>
+                                                                    </Style>
+                                                                  </Paragraph>
+                                                                </Paragraphs>
+                                                                <rd:DefaultName>error_k</rd:DefaultName>
+                                                                <Style>
+                                                                  <Border>
+                                                                    <Color>LightGrey</Color>
+                                                                    <Style>Solid</Style>
+                                                                  </Border>
+                                                                  <PaddingLeft>2pt</PaddingLeft>
+                                                                  <PaddingRight>2pt</PaddingRight>
+                                                                  <PaddingTop>2pt</PaddingTop>
+                                                                  <PaddingBottom>2pt</PaddingBottom>
+                                                                </Style>
+                                                              </Textbox>
+                                                            </CellContents>
+                                                          </TablixHeader>
+                                                          <TablixMembers>
+                                                            <TablixMember />
+                                                          </TablixMembers>
+                                                        </TablixMember>
+                                                      </TablixMembers>
+                                                    </TablixMember>
+                                                  </TablixMembers>
+                                                </TablixMember>
+                                              </TablixMembers>
+                                            </TablixMember>
+                                          </TablixMembers>
+                                        </TablixMember>
+                                      </TablixMembers>
+                                    </TablixMember>
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>cars_list</DataSetName>
+            <Top>36.51528mm</Top>
+            <Left>1.75467mm</Left>
+            <Height>20.24896mm</Height>
+            <Width>147.5995mm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Грузоотправитель:    "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Грузоотправитель</Label>
+                    <Value>=First(Fields!shipper.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Грузополучатель:     "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Грузополучатель</Label>
+                    <Value>=First(Fields!consignee.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Номер измерения:    "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Номер измерения</Label>
+                    <Value>=First(Fields!num_izm.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Время измерения:    "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Время измерения</Label>
+                    <Value>=First(Fields!start_time.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>12.34722mm</Top>
+            <Left>0mm</Left>
+            <Height>22.40417mm</Height>
+            <Width>78.44584mm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Весы:  "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Весы</Label>
+                    <Value>=First(Fields!weigher.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Фракция:   "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Фракция</Label>
+                    <Value>=First(Fields!fraction.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Погрешность: "</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Погрешность</Label>
+                    <Value>=First(Fields!error.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox8</rd:DefaultName>
+            <Top>12.34722mm</Top>
+            <Left>96.04375mm</Left>
+            <Height>22.40417mm</Height>
+            <Width>64.65575mm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ExecutionTime">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Сформированно:      </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Дата и время</Label>
+                    <Value>=First(Fields!date.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>         Оператор:__________________</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Label>Оператоп</Label>
+                    <Value>=First(Fields!oper_name.Value, "main_info")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ExecutionTime</rd:DefaultName>
+            <Top>58.52813mm</Top>
+            <Left>1.75467mm</Left>
+            <Height>6.35mm</Height>
+            <Width>195.2245mm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>66.93958mm</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>212.46042mm</Width>
+      <Page>
+        <PageFooter>
+          <Height>16.45709mm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportID>90eb2598-94f5-4748-969c-062adcf093b7</rd:ReportID>
+</Report>
