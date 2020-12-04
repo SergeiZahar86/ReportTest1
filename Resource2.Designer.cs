@@ -22,14 +22,14 @@ namespace ReportTest1 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource1 {
+    internal class Resource2 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource1() {
+        internal Resource2() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ReportTest1 {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ReportTest1.Resource1", typeof(Resource1).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ReportTest1.Resource2", typeof(Resource2).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,19 @@ namespace ReportTest1 {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на &lt;html&gt;
+        ///    &lt;head&gt;
+        ///        &lt;meta charset=&quot;utf-8&quot;&gt;
+        ///        &lt;title&gt;Документ HTML5&lt;/title&gt;
+        ///    &lt;/head&gt;
+        ///    &lt;body&gt;
+        ///        &lt;div&gt;Содержание документа HTML5&lt;/div&gt;
+        ///    &lt;/body&gt;
+        ///&lt;/html&gt;.
         /// </summary>
-        internal static string ddd {
+        internal static string TEST_HTML {
             get {
-                return ResourceManager.GetString("ddd", resourceCulture);
+                return ResourceManager.GetString("TEST_HTML", resourceCulture);
             }
         }
     }

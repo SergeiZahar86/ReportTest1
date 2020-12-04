@@ -8,6 +8,10 @@ using RestSharp;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Threading;
+using System.Resources;
+using System.Collections;
+using System.Reflection;
 
 namespace ReportTest1
 {
@@ -20,61 +24,155 @@ namespace ReportTest1
     }
     class Program
     {
-        public static string numGuid = "A78A";                         // первые четыре знака номера партии
-
 
         
+
+        public static string numGuid = "A78A";                         // первые четыре знака номера партии
+       
+        static string Server;
+        static Dictionary<string, string> param;
+
+        public static void log(string message)
+        {
+            using (StreamWriter sw = File.AppendText("log.txt"))
+            {
+                sw.WriteLine(message);
+
+            }
+        }
+
+        public string ReadResource(string name)
+        {
+            // Determine path
+            var assembly = Assembly.GetExecutingAssembly();
+           
+            using (Stream stream = assembly.GetManifestResourceStream(name))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
         static void Main(string[] args)
         {
-            
-            if (args.Length == 0) return;
-            String tid = "hello world";
-            string aa ="";
-            foreach(string s in args)
-            {
-                aa += ","+s;
-            }
-            //String tid = args[0];String tid = "Exel";
 
-            ///// кирилу для проверки
-            byte[] ddd = Encoding.UTF8.GetBytes(tid + aa);
-            FileStream fsfg = new FileStream("outputTid.txt", FileMode.Create);  // .pdf, .xls, .doc
-            fsfg.Write(ddd, 0, ddd.Length);
+
+
+            /*Program p = new Program();
+
+            string[] res = p.GetType().Assembly.GetManifestResourceNames();
+
+            string result = p.ReadResource("TEST_HTML");*/
+           
+
 
 
 
             Dictionary<string, string> config = DFReport.getConfig();                    // Получение конфигурации
-            string server = config["Server"];
-            string ConnectionString = config["ConnectionString"];
+            Server = config["Server"];
+            string error;
+
+            if (args.Length == 0) return;
+            String tid = args[0];
+            // Если пустой tid
+            if (tid.Length != 16)
+            {
+                string msg = "ERROR: tid empty";
+                byte[] buf = Encoding.UTF8.GetBytes(msg);
+                bool ret = DFReport.putData(Server, tid, buf, out error);
+                Environment.Exit(0);
+            }
+            log(Server);
+
+            try
+            {
+                param = DFReport.getParam(Server, tid); // Получение параметров документа ключ значение
+                if (param.Count == 0)
+                {
+                    string msg = "ERROR: param empty";
+                    byte[] buf = Encoding.UTF8.GetBytes(msg);
+                    bool ret = DFReport.putData(Server, tid, buf, out error);
+                    Environment.Exit(0);
+                }
+            }
+            catch (Exception gk)
+            {
+                    byte[] buf = Encoding.UTF8.GetBytes(gk.Message);
+                    bool ret = DFReport.putData(Server, tid, buf, out error);
+                    Environment.Exit(0);
+            }
+            log(param["type"]);
+
+                // Передача html ==========================================================
+                if (String.Compare(param["type"], "html") == 0)
+                {
+                    try
+                    {
+                    log("start send html");
+                    string html = "<html><body><div>Содержание документа HTML5</div></body></html>";
+                    byte[] buf = Encoding.UTF8.GetBytes(html);
+                    bool ret = DFReport.putData(Server, tid, buf, out error);
+                    //Thread.Sleep(2000);
+                    if (ret == false)
+                    {
+                        log(error);
+                    }                    }
+                    catch(Exception ex) { log(ex.Message); ;  Environment.Exit(0); }
+                log("end send html");
+                Environment.Exit(0);
+                }
+
+            log("error_step");
+                // Формирование документа ===================================================
+
+                /*{
+
+
+
+                    string error;
+                    byte[] ddd = Encoding.UTF8.GetBytes(tid);
+                    bool ret = DFReport.putData(server, tid, ddd, out error);
+                    byte[] ddff = Encoding.UTF8.GetBytes(error);
+                    FileStream fsfg = new FileStream("TEST_Tid.txt", FileMode.Create);  // .pdf, .xls, .doc
+                    fsfg.Write(ddff, 0, ddff.Length);
+                }
+
+            }
+            catch (Exception j)
+            {
+                byte[] ddff = Encoding.UTF8.GetBytes(j.ToString());
+                FileStream fsfg = new FileStream("TEST_EXe.txt", FileMode.Create);  // .pdf, .xls, .doc
+                fsfg.Write(ddff, 0, ddff.Length);
+            }
+
+            if (1 == 1)
+            {
+                Thread.Sleep(1000);
+                Environment.Exit(0);
+            }*/
+
+
+
+         
 
             // получаем сведения по партии вагонов
-            string sqlExpressionPart = $"SELECT part_id, oper, num_izm, start_time," +
-                $" end_time FROM tb_part WHERE part_id LIKE '{numGuid}%'";
+            /*string sqlExpressionPart = $"SELECT part_id, oper, num_izm, start_time," +
+                $" end_time FROM tb_part WHERE part_id LIKE '{numGuid}%'";*/
 
             // получаем 25 вагонов
-            string sqlExpressionCar = $"SELECT car.part_id, car.car_id, num, car.tara, car.tara_e," +
+            /*string sqlExpressionCar = $"SELECT car.part_id, car.car_id, num, car.tara, car.tara_e," +
                 $" car.right_truck, car.brutto, car.netto, car.weighing_time, car.carrying_e," +
                 $" car.att_time, car.left_truck, cont.name as shipper, cons.name as consigner," +
                 $" mat.name as mat FROM tb_car as car left join sp_contractor as cont " +
                 $" on car.shipper = cont.contractor_id left join sp_contractor as cons " +
                 $" on car.consigner = cons.contractor_id left join sp_mat as mat " +
-                $" on car.mat = mat.mat_id where car.part_id LIKE '{numGuid}%' and car.att_code in (1, 2)";
+                $" on car.mat = mat.mat_id where car.part_id LIKE '{numGuid}%' and car.att_code in (1, 2)";*/
 
-            Dictionary<string, string> param = DFReport.getParam(server, tid); // Получение параметров документа
+            //Dictionary<string, string> param = DFReport.getParam(server, tid); // Получение параметров документа ключ значение
+            //  <"type","например pdf"> приходит от веб клиента
 
             ///// кирилу для проверки
-            string ss = ToDebug.ToDebugString<string, string>(param);
-            byte[] btt = Encoding.UTF8.GetBytes(ss);
-            FileStream fs = new FileStream("output.pdf", FileMode.Create);  // .pdf, .xls, .doc
-            fs.Write(btt, 0, btt.Length);
-
-
-            /*if (param["type"] == "html")
-            {
-                string error;
-                bool ret = DFReport.putData(server, tid, Encoding.UTF8.GetBytes("Hello, world!"), out error);
-                System.Environment.Exit(0);
-            }*/
+            
             Dictionary<string, DataTable> DataSets = new Dictionary<string, DataTable>();
 
             // Создаем таблицу main_info
@@ -148,19 +246,16 @@ namespace ReportTest1
 
                 //FileStream fs = new FileStream("output.xls", FileMode.Create);  // .pdf, .xls, .doc
                 //fs.Write(buf, 0, buf.Length);
-
-                string error;
-                bool ret = DFReport.putData(server, tid, buf, out error);
-                if (ret == false)
-                {
-                    Console.WriteLine(error);
-                }
-
+                
+                DFReport.putData(Server, tid, buf, out error);
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //Console.Read();
+                string msg = "ERROR: " + ex.Message;
+                byte[] buf = Encoding.UTF8.GetBytes(msg);
+                DFReport.putData(Server, tid, buf, out error);                
             }
 
             /*
