@@ -12,11 +12,13 @@ using System.Threading;
 using System.Resources;
 using System.Collections;
 using System.Reflection;
+using System.Globalization;
 
 namespace ReportTest1
 {
     static class ToDebug
     {
+        // передача Dictionary в виде строки
         public static string ToDebugString<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
         {
             return "{" + string.Join(",", dictionary.Select(kv => kv.Key + "=" + kv.Value).ToArray()) + "}";
@@ -24,68 +26,40 @@ namespace ReportTest1
     }
     class Program
     {
-
-        
-
         public static string numGuid = "A78A";                         // первые четыре знака номера партии
-       
-        static string Server;
-        static Dictionary<string, string> param;
+        static string Server;                                          // ip сервера
+        static Dictionary<string, string> param;                       // параметры для построения отчета                  
 
-        public static void log(string message)
+        public static void log(string message)                         // запись логов в текстовый файл
         {
             using (StreamWriter sw = File.AppendText("log.txt"))
             {
                 sw.WriteLine(message);
-
-            }
-        }
-
-        public string ReadResource(string name)
-        {
-            // Determine path
-            var assembly = Assembly.GetExecutingAssembly();
-           
-            using (Stream stream = assembly.GetManifestResourceStream(name))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
             }
         }
 
         static void Main(string[] args)
         {
-
-
-
-            /*Program p = new Program();
-
-            string[] res = p.GetType().Assembly.GetManifestResourceNames();
-
-            string result = p.ReadResource("TEST_HTML");*/
-           
-
-
-
-
-            Dictionary<string, string> config = DFReport.getConfig();                    // Получение конфигурации
+            Dictionary<string, string> config = DFReport.getConfig();             // Получение конфигурации с сервера
             Server = config["Server"];
-            string error;
+            string error;  // для вывода ошибок
 
-            if (args.Length == 0) return;
-            String tid = args[0];
+            // принимаем параметры переданные через командную строку при запуске .exe этой программы
+            if (args.Length == 0) return;      // если нет параметров, то выходим из программы
+            String tid = args[0];              // первый параметр из массива
             // Если пустой tid
-            if (tid.Length != 16)
+            if (tid.Length != 16)              // если длина строки не 16, то закрываем программу и передаем текст ошибки
             {
                 string msg = "ERROR: tid empty";
                 byte[] buf = Encoding.UTF8.GetBytes(msg);
                 bool ret = DFReport.putData(Server, tid, buf, out error);
-                Environment.Exit(0);
+                Environment.Exit(0);  // выход из программы
             }
-            log(Server);
+            log(Server);  // делаем лог
 
             try
             {
+                //  <"type","например pdf"> приходит от веб клиента
                 param = DFReport.getParam(Server, tid); // Получение параметров документа ключ значение
                 if (param.Count == 0)
                 {
@@ -104,63 +78,43 @@ namespace ReportTest1
             log(param["type"]);
 
                 // Передача html ==========================================================
-                if (String.Compare(param["type"], "html") == 0)
+            if (String.Compare(param["type"], "html") == 0)
+            {
+                try
                 {
-                    try
-                    {
                     log("start send html");
-                    string html = "<html><body><div>Содержание документа HTML5</div></body></html>";
-                    byte[] buf = Encoding.UTF8.GetBytes(html);
+
+                    ///////  формирование строки из html файла созданного в ресурсах Resource  //////////////
+                    ResourceManager rm = new ResourceManager("ReportTest1.Resource", Assembly.GetExecutingAssembly());
+                    String mem = (String)rm.GetObject("TEST_HTML", CultureInfo.CurrentCulture);
+                    /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                    byte[] buf = Encoding.UTF8.GetBytes(mem);
                     bool ret = DFReport.putData(Server, tid, buf, out error);
                     //Thread.Sleep(2000);
                     if (ret == false)
-                    {
-                        log(error);
-                    }                    }
-                    catch(Exception ex) { log(ex.Message); ;  Environment.Exit(0); }
+                        {
+                            log(error);
+                        }
+                }
+                catch(Exception ex)
+                { 
+                    log(ex.Message);
+                    Environment.Exit(0);
+                }
+
                 log("end send html");
                 Environment.Exit(0);
-                }
-
+            }
             log("error_step");
-                // Формирование документа ===================================================
-
-                /*{
-
-
-
-                    string error;
-                    byte[] ddd = Encoding.UTF8.GetBytes(tid);
-                    bool ret = DFReport.putData(server, tid, ddd, out error);
-                    byte[] ddff = Encoding.UTF8.GetBytes(error);
-                    FileStream fsfg = new FileStream("TEST_Tid.txt", FileMode.Create);  // .pdf, .xls, .doc
-                    fsfg.Write(ddff, 0, ddff.Length);
-                }
-
-            }
-            catch (Exception j)
-            {
-                byte[] ddff = Encoding.UTF8.GetBytes(j.ToString());
-                FileStream fsfg = new FileStream("TEST_EXe.txt", FileMode.Create);  // .pdf, .xls, .doc
-                fsfg.Write(ddff, 0, ddff.Length);
-            }
-
-            if (1 == 1)
-            {
-                Thread.Sleep(1000);
-                Environment.Exit(0);
-            }*/
-
-
-
-         
-
+            
             // получаем сведения по партии вагонов
             /*string sqlExpressionPart = $"SELECT part_id, oper, num_izm, start_time," +
-                $" end_time FROM tb_part WHERE part_id LIKE '{numGuid}%'";*/
+                $" end_time FROM tb_part WHERE part_id LIKE '{numGuid}%'";
 
             // получаем 25 вагонов
-            /*string sqlExpressionCar = $"SELECT car.part_id, car.car_id, num, car.tara, car.tara_e," +
+            string sqlExpressionCar = $"SELECT car.part_id, car.car_id, num, car.tara, car.tara_e," +
                 $" car.right_truck, car.brutto, car.netto, car.weighing_time, car.carrying_e," +
                 $" car.att_time, car.left_truck, cont.name as shipper, cons.name as consigner," +
                 $" mat.name as mat FROM tb_car as car left join sp_contractor as cont " +
@@ -168,11 +122,6 @@ namespace ReportTest1
                 $" on car.consigner = cons.contractor_id left join sp_mat as mat " +
                 $" on car.mat = mat.mat_id where car.part_id LIKE '{numGuid}%' and car.att_code in (1, 2)";*/
 
-            //Dictionary<string, string> param = DFReport.getParam(server, tid); // Получение параметров документа ключ значение
-            //  <"type","например pdf"> приходит от веб клиента
-
-            ///// кирилу для проверки
-            
             Dictionary<string, DataTable> DataSets = new Dictionary<string, DataTable>();
 
             // Создаем таблицу main_info
@@ -243,12 +192,9 @@ namespace ReportTest1
             {
                 string rdl = File.ReadAllText("PlumbLineProtocol.rdl", Encoding.GetEncoding(866));
                 byte[] buf = DFReport.build_doc(DataSets, rdl, param["type"]);
-
                 //FileStream fs = new FileStream("output.xls", FileMode.Create);  // .pdf, .xls, .doc
                 //fs.Write(buf, 0, buf.Length);
-                
                 DFReport.putData(Server, tid, buf, out error);
-                
             }
             catch (Exception ex)
             {
